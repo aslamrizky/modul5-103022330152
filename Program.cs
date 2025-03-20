@@ -24,6 +24,6 @@ public class Program
     public static void Main(String[] args)
     {
         PemrosesData data = new PemrosesData();
-        Console.WriteLine("Nilai max: " + data.DapatkanNilaiTerbesar<int>(1030, 2233, 0152));
+        Console.WriteLine("Nilai max: " + data.DapatkanNilaiTerbesar<float>(10, 30, 22));
     }
 }
