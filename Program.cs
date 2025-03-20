@@ -22,6 +22,26 @@ public class SimpleDataBase<T>
         {
             Console.WriteLine("Data " + (i + 1) + " berisi: " + storedData[i] + ", yang disimpan pada waktu UTC: " + inputDates[i]);
         }
+     }
+}
+
+public class PemrosesData()
+{
+    public dynamic DapatkanNilaiTerbesar<T>(T x1, T x2, T x3)
+    {
+        dynamic bil1 = x1;
+        dynamic bil2 = x2;
+        dynamic bil3 = x3;
+        if (bil1 > bil2)
+        {
+            return bil1;
+        } else if (bil3 > bil2)
+        {
+            return bil3;
+        } else
+        {
+            return bil2;
+        }
     }
 }
 
@@ -34,5 +54,7 @@ public class Program
         db.AddNewData(30);
         db.AddNewData(22);
         db.PrintAllData();
+        PemrosesData data = new PemrosesData();
+        Console.WriteLine("Nilai max: " + data.DapatkanNilaiTerbesar<float>(10, 30, 22));
     }
 }
